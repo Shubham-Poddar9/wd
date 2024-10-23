@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p id="class"></p>
+    <script>
+       class car{
+        constructor (name,colour,price,year){
+            this.name=name;
+            this.colour=colour;
+            this.price=price;
+            this.year=year;
+        }
+        } 
+        var obj=new car("BMW","silver","$100000",2050);
+        document.getElementById("class").innerHTML=obj.name+" "+obj.colour+" "+obj.price+" "+obj.year;
+    </script>
+</body>
+</html>
