@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+</head>
+<body>
+ <p id="s"></p>  
+ <script>
+    async function fun(A,S) {
+        var result=await A+S;
+        display(result);
+    }
+    function display(result){
+        document.getElementById("s").innerHTML=result;
+    }
+fun(111111111,222222222);
+ </script>
+</body>
+</html>
