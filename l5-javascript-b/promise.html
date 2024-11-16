@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="ok"></p> 
+   <script>
+    function promise(s){
+        document.getElementById("ok").innerHTML=s;
+    }
+    var p=new Promise(function(a,b)
+{
+    let x=45;
+    if (x==45){
+        a("ok");
+    }
+    else{
+        b("error");
+    }
+}
+);
+p.then(
+function(value){
+    promise(value);
+},
+function(error){
+    promise(error);
+}
+
+);
+   </script>
+</body>
+</html>

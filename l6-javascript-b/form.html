@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <form name="Reg" onsubmit="valid()">
+        <input type="text" name="f">
+        <input type="submit">
+    </form>
+    <script>
+        function valid(){
+            var v=document.forms["Reg"]["f"].value;
+            if(v==""){
+                alert("Please Enter");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
