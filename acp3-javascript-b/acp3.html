@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p id="o"></p>
+    <button onclick="ascending()">Ascending order</button>
+    <button onclick="descending()">Descending order</button>
+    <p id="t"></p>
+    <script>
+    var number=[7,77,2,777,44];
+    function mapping(num){
+        return num*10;
+    }
+    var ans=number.map(mapping);
+    document.getElementById("o").innerHTML=ans;
+
+    var point=[315,01,588,2,77,90];
+    document.getElementById("t").innerHTML=point;
+    function ascending(){
+        point.sort(function (a,b){return a-b});
+        document.getElementById("t").innerHTML=point;    
+    }
+    function descending(){
+        point.sort(function (a,b){return b-a});
+        document.getElementById("t").innerHTML=point;   
+    }
+    </script>
+</body>
+</html>
