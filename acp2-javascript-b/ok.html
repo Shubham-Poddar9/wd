@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <p id="ok"></p>  
+  <p id="no"></p> 
+  <script>
+    class car{
+        constructor(Brand){
+            this.Brand=Brand;
+
+        }
+        display(){
+            document.getElementById("ok").innerHTML=this.Brand;
+        }
+    }
+    class model extends car{
+        constructor(Brand,year){
+            super(Brand);
+            this.year=year;
+        }
+        display1(){
+            document.getElementById("no").innerHTML=this.year;
+        }
+    }
+    var obj=new model ("Tata",2025);
+    obj.display();
+    obj.display1();
+  </script>
+</body>
+</html>
