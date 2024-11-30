@@ -6,18 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="ok" type="number" min="3" max="17">
+    <input id="k" type="number" min="18" max="100">
 <button onclick="fun()">Click me!!</button>
 <h1 id="result"></h1>
-<script>
-    function fun(){
+
+<form name="Regration" onsubmit="valid()">
+    <input type="text" name="o">
+    <input type="submit">
+</form>
+function fun(){
         var oo=document.getElementById("ok");
         if(!oo.checkValidity()){
             document.getElementById("result").innerHTML=oo.validationMessage;
 
         }
         else{
-            document.getElementById("result").innerHTML="ok";
+            document.getElementById("result").innerHTML="k";
+        }
+    }
+
+    function valid(){
+        var v=document.forms["Regration"]["o"].value;
+        if(v==""){
+            alert("Please Enter your name");
+            return false;
         }
     }
 </script>
